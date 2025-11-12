@@ -36,8 +36,15 @@ function Navbar() {
 
         {/* User Info and Logout */}
         <div className="flex items-center gap-4 text-sm">
-          <p className="max-sm:hidden font-medium text-gray-700">
+          {/* <p className="max-sm:hidden font-medium text-gray-700">
             Hi, {user?.name}
+          </p> */}
+          <p className="font-medium text-gray-700">
+            {/* This span will be hidden on screens smaller than 'sm' */}
+            <span className="max-sm:hidden">Hi, </span>
+
+            {/* The name will always be visible */}
+            {user?.name}
           </p>
           <button
             onClick={logoutUser}
